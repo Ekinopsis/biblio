@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<div class="container p-4">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3 class="card-title text-uppercase">Lista de libros</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table *ngIf="inicio.length>0" class="table table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ISBN</th>
+                            <th>TITULO</th>
+                            <th>AUTOR</th>
+                            <th>EDITORIAL</th>
+                            <th>FECHA DE PUBLICACIÓN</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let libro of inicio">
+                            <td>{{libro.isbn}}</td>
+                            <td>{{libro.titulo}}</td>
+                            <td>{{libro.autor}}</td>
+                            <td>{{libro.editorial}}</td>
+                            <td>{{libro.fechaPublicacion}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <A HREF="/inicio"> Volver al inicio </A>
+        </div>
+        <div class="card-footer">
+        </div>
+    </div>
+</div>

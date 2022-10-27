@@ -1,0 +1,91 @@
+<body background="https://img.freepik.com/free-photo/laptop-computer-book-workplace-library-room_1150-5925.jpg?w=996&t=st=
+    1666800423~exp=1666801023~hmac=e16eb73b1665b6585f9ea2086f1c0db0474aee7e91ab6a31f5f50ea83bb4dbd2">
+
+    <section class="vh-200">
+        <div class="container py-5 h-200">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+                    <div class="card" style="border-radius: 1rem; max-height: 1000px;">
+                        <div class="row g-0">
+                            <div class="align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+                                    <form [formGroup]="registro" (ngSubmit)="registrar()" class="user">
+
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <span class="h1 fw-bold mb-0">Nuevo estudiante</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" id="identificacion" placeholder="Codigo"
+                                                formControlName="identificacion"
+                                                class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registro.get('identificacion')?.invalid && registro.get('identificacion')?.touched"
+                                                class="text-danger">
+                                                *Su <strong>CODIGO</strong> es obligatorio
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="nombres" placeholder="Nombre"
+                                                formControlName="nombres" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registro.get('nombres')?.invalid && registro.get('nombres')?.touched"
+                                                class="text-danger">
+                                                *Su <strong>Nombre</strong> es obligatorio
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="apellidos" placeholder="Apellido"
+                                                formControlName="apellidos" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registro.get('apellidos')?.invalid && registro.get('apellidos')?.touched"
+                                                class="text-danger">
+                                                *Su <strong>Apellido</strong> es obligatorio
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" id="celular" placeholder="Numero de celular"
+                                                formControlName="celular" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registro.get('celular')?.invalid && registro.get('celular')?.touched"
+                                                class="text-danger">
+                                                *Su numero de<strong>Celular</strong> es obligatorio
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="correo" placeholder="correo electronico"
+                                                formControlName="correo" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registro.get('correo')?.invalid && registro.get('correo')?.touched"
+                                                class="text-danger">
+                                                *Su <strong>correo</strong> es obligatorio
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" id="password" placeholder="Contraseña"
+                                                formControlName="password" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registro.get('password')?.invalid && registro.get('password')?.touched"
+                                                class="text-danger">
+                                                *Escriba su <strong>Contraseña</strong>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-success"
+                                                    [disabled]="registro.invalid">Registro</button>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <br>
+                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Ya tienes cuenta <br><a
+                                                routerLink="/" class="btn btn-primary">Inicia Sesión</a></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

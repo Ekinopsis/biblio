@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="container p-4">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3 class="card-title text-uppercase">Listado De Prestamos Registrados</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table *ngIf="listarPrestamos.length>0" class="table table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ISBN libro</th>
+                            <th>codigo</th>
+                            <th>Fecha Prestamo</th>
+                            <th>Fecha Devolución</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let prestamo of listarPrestamos">
+                          
+                            <td>{{prestamo.isbnLibro}}</td>
+                            <td>{{prestamo.idUsuario}}</td>
+                            <td>{{prestamo.fechaPrestamo}}</td>
+                            <td>{{prestamo.fechaDevolucion}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <A HREF="/inicio"> Volver al inicio </A>
+            </div>
+        </div>
+        
+    </div>
+</div>
